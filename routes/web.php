@@ -17,8 +17,12 @@ Route::get('/', function () {
 
 Route::get('/test', function () {
    // \App\Post::create(['title' => 'test title', 'content_2' => 'test content',]);
-    $post = new \App\Post();
+
+    /*$post = new \App\Post();
     $post->title = 'test title';
     $post->content_2 = 'test content';
-    $post->save();
+    $post->save();*/
+
+    $posts = \App\Post::all();
+    dd($posts);
 });
