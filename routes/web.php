@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-\App\Post::create(['title' => 'test title', 'content_2' => 'test content',]);
+Route::get('/test', function () {
+    \App\Post::create(['title' => 'test title', 'content_2' => 'test content',]);
+});
