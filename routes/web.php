@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('/test', function () {
    // \App\Post::create(['title' => 'test title', 'content_2' => 'test content',]);
-
+    \App\Comment::create(['title' => 'test title', 'content_2' => 'test content',]);
     /*$post = new \App\Post();
     $post->title = 'test title';
     $post->content_2 = 'test content';
@@ -56,8 +56,8 @@ Route::get('/test', function () {
     $featuredPosts = \App\Post::where('is_feature', 1)->get();
     dd($featuredPosts);*/
 
-    $fourthPost = \App\Post::find(4);
+    /*$fourthPost = \App\Post::find(4);
     dd($fourthPost);
     $lastPost = \App\Post::orderBy('id', 'DESC')->first();
-    dd($lastPost);
+    dd($lastPost);*/
 });
