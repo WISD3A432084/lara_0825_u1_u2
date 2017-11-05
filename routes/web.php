@@ -44,6 +44,8 @@ Route::get('/test', function () {
     $post->content_2 = 'saved content';
     $post->save();*/
 
-    $post = \App\Post::find(1);
-    $post->delete();
+    /*$post = \App\Post::find(1);
+    $post->delete();*/
+
+    \App\Post::destroy(2);
 });
