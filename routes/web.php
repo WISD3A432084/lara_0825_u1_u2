@@ -29,7 +29,13 @@ Route::get('/test', function () {
     /*$post = \App\Post::find(1);
     dd($post);*/
 
-    $posts = \App\Post::where('id', '<', 10)
+    /*$posts = \App\Post::where('id', '<', 10)
         ->orderBy('id', 'DESC')->get();
-    dd($posts);
+    dd($posts);*/
+
+    $post = \App\Post::find(1);
+    $post->update([
+        'title' => 'updated title',
+        'content_2' => 'updated content',
+    ]);
 });
