@@ -23,6 +23,9 @@ Route::get('/test', function () {
     $post->content_2 = 'test content';
     $post->save();*/
 
-    $posts = \App\Post::all();
-    dd($posts);
+    /*$posts = \App\Post::all();
+    dd($posts);*/
+
+    $post = \App\Post::find(1);
+    dd($post);
 });
