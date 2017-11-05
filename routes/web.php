@@ -39,8 +39,11 @@ Route::get('/test', function () {
         'content_2' => 'updated content',
     ]);*/
 
-    $post = \App\Post::find(1);
+    /*$post = \App\Post::find(1);
     $post->title = 'saved title';
     $post->content_2 = 'saved content';
-    $post->save();
+    $post->save();*/
+
+    $post = \App\Post::find(1);
+    $post->delete();
 });
