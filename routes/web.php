@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('/test', function () {
    // \App\Post::create(['title' => 'test title', 'content_2' => 'test content',]);
-    \App\Comment::create(['title' => 'test title', 'content_2' => 'test content',]);
+   // \App\Comment::create(['title' => 'test title', 'content_2' => 'test content',]);
     /*$post = new \App\Post();
     $post->title = 'test title';
     $post->content_2 = 'test content';
@@ -60,4 +60,9 @@ Route::get('/test', function () {
     dd($fourthPost);
     $lastPost = \App\Post::orderBy('id', 'DESC')->first();
     dd($lastPost);*/
+
+    $post = \App\Post::find(1);
+    foreach($post->comments as $comment) {
+        echo $comment->content.'<br>';
+    }
 });
