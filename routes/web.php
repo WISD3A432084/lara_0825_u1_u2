@@ -16,8 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-   \App\Post::create(['title' => 'test title', 'content_2' => 'test content',]);
-   // \App\Comment::create(['title' => 'test title', 'content_2' => 'test content',]);
+   //\App\Post::create(['title' => 'test title', 'content_2' => 'test content',]);
+    \App\Comment::create(['content_2' => 'test content', 'post_id' => '2' ,]);
     /*$post = new \App\Post();
     $post->title = 'test title';
     $post->content_2 = 'test content';
